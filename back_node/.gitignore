@@ -1,0 +1,13 @@
+# Ignorar node_modules en cualquier subcarpeta
+**/node_modules/
+
+# Ignorar archivos del entorno
+**/.env
+
+# Ignorar dist o build
+**/dist/
+**/build/
+
+# Ignorar archivos temporales del sistema
+.DS_Store
+Thumbs.db
