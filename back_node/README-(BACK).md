@@ -1,6 +1,6 @@
 # 🧠 Backend - Gestión de Usuarios
 
-Este backend forma parte del sistema **Gestión de Usuarios**, una aplicación que permite registrar, listar, actualizar y eliminar usuarios desde una interfaz web (frontend en Angular).  
+Este backend forma parte de la prueba de **Gestión de Usuarios**, una aplicación que permite registrar, listar, actualizar y eliminar usuarios desde una interfaz web (frontend en Angular).  
 El backend se encarga de exponer una **API RESTful** que interactúa con la base de datos para realizar las operaciones CRUD de los usuarios.
 
 ---
@@ -18,38 +18,29 @@ El backend se encarga de exponer una **API RESTful** que interactúa con la base
 
 ## 🗂️ Estructura del proyecto
 
-backend/
-│
-├── node_modules/ # Dependencias del proyecto
-├── src/
-│ ├── config/
-│ │ └── db.js # Configuración de conexión a la base de datos
-│ ├── controllers/
-│ │ └── usersController.js # Lógica de negocio (CRUD)
-│ ├── routes/
-│ │ └── usersRoutes.js # Definición de rutas de la API
-│ ├── models/
-│ │ └── usersModel.js # Consultas SQL o estructura de modelo
-│ ├── app.js # Configuración principal del servidor Express
-│ └── server.js # Punto de entrada del servidor
-│
-├── .env # Variables de entorno (configuración sensible)
-├── .gitignore # Archivos y carpetas ignoradas por Git
-├── package.json # Dependencias y scripts del proyecto
-└── README.md # Documentación del proyecto
+```bash
 
-/docs
-  /user
-    /project
-      _index.md
-      import_from_github.md
-    /group
-      _index.md
-    /profile
-      _index.md
-      account.md
-      applications.md
-      emails.md
+    backend/
+    │
+    ├── node_modules/ # Dependencias del proyecto
+    ├── src/
+    │ ├── config/
+    │ │ └── db.js # Configuración de conexión a la base de datos
+    │ ├── controllers/
+    │ │ └── usersController.js # Lógica de negocio (CRUD)
+    │ ├── routes/
+    │ │ └── usersRoutes.js # Definición de rutas de la API
+    │ ├── models/
+    │ │ └── usersModel.js # Consultas SQL o estructura de modelo
+    │ ├── app.js # Configuración principal del servidor Express
+    │ └── server.js # Punto de entrada del servidor
+    │
+    ├── .env # Variables de entorno (configuración sensible)
+    ├── .gitignore # Archivos y carpetas ignoradas por Git
+    ├── package.json # Dependencias y scripts del proyecto
+    └── README.md # Documentación del proyecto
+
+```
 
 ---
 
@@ -88,6 +79,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    - PORT=4000
 
 ## 🔗 Endpoints principales
+
 Método Ruta Descripción
 
 - GET /api/users Obtener todos los usuarios
