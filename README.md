@@ -5,35 +5,45 @@ El objetivo del proyecto es crear un sistema **Gestión de Usuarios**, el cual i
 
 ---
 
+## PREVIEW DE LA APLICACIÓN
+
+<p align="center">
+  <img src="preview/FRONT.png" alt="Preview" width="800"/>
+</p>
+
+---
+
 ## 🧠 Objetivo de la prueba
 
 Evaluar las habilidades de desarrollo **Fullstack** mediante la creación de una aplicación funcional que cumpla con las siguientes características:
 
-1. **Backend (Node.js + Express):**  
-   - Crear un microservicio que se conecte a una base de datos PostgreSQL.  
-   - Exponer una API RESTful con operaciones CRUD sobre la tabla `usuarios`.  
+1. **Backend (Node.js + Express):**
 
-2. **Frontend (Angular):**  
-   - Consumir la API desarrollada en el backend.  
-   - Mostrar y gestionar los datos de los usuarios mediante una interfaz interactiva.  
-   - Implementar un diseño atractivo y responsive utilizando TailwindCSS.  
+   - Crear un microservicio que se conecte a una base de datos PostgreSQL.
+   - Exponer una API RESTful con operaciones CRUD sobre la tabla `usuarios`.
 
-3. **Base de datos (PostgreSQL):**  
-   - Crear la tabla `usuarios` con campos `id`, `nombre`, `correo` y `edad`.  
+2. **Frontend (Angular):**
+
+   - Consumir la API desarrollada en el backend.
+   - Mostrar y gestionar los datos de los usuarios mediante una interfaz interactiva.
+   - Implementar un diseño atractivo y responsive utilizando TailwindCSS.
+
+3. **Base de datos (PostgreSQL):**
+   - Crear la tabla `usuarios` con campos `id`, `nombre`, `correo` y `edad`.
    - Insertar datos iniciales para pruebas.
 
 ---
 
 ## 🧩 Tecnologías utilizadas
 
-| Componente | Tecnología |
-|:------------|:------------|
-| **Backend** | Node.js + Express |
-| **Frontend** | Angular + TailwindCSS |
-| **Base de datos** | PostgreSQL |
-| **Librerías** | CORS, Dotenv, RxJS |
-| **Gestor de dependencias** | npm |
-| **Pruebas y ejecución** | Postman / Navegador web |
+| Componente                 | Tecnología              |
+| :------------------------- | :---------------------- |
+| **Backend**                | Node.js + Express       |
+| **Frontend**               | Angular + TailwindCSS   |
+| **Base de datos**          | PostgreSQL              |
+| **Librerías**              | CORS, Dotenv, RxJS      |
+| **Gestor de dependencias** | npm                     |
+| **Pruebas y ejecución**    | Postman / Navegador web |
 
 ---
 
@@ -61,8 +71,8 @@ MiguelAyala_PruebaTecnica/
 
 ### 1️⃣ Paso 1 – Configurar la base de datos
 
-1. Abre **pgAdmin 4** o **psql Shell**.  
-2. Crea una base de datos llamada `db_postgresql_angel`.  
+1. Abre **pgAdmin 4** o **psql Shell**.
+2. Crea una base de datos llamada `db_postgresql_angel`.
 3. Copia y ejecuta el contenido del archivo:
    ```
    /database/script_postgresql.sql
@@ -98,7 +108,7 @@ MiguelAyala_PruebaTecnica/
    npm run dev
    ```
 5. El backend estará disponible en:  
-   👉 **http://localhost:4000/api/users**
+   👉 **http://localhost:3001/api/users**
 
 ---
 
@@ -124,12 +134,12 @@ MiguelAyala_PruebaTecnica/
 ## 🧠 Descripción general del funcionamiento
 
 El proyecto permite realizar operaciones CRUD sobre los usuarios registrados en la base de datos.  
-El frontend (Angular) interactúa con el backend (Node.js) mediante peticiones HTTP y refleja los cambios en tiempo real.  
+El frontend (Angular) interactúa con el backend (Node.js) mediante peticiones HTTP y refleja los cambios en tiempo real.
 
-- **GET:** Mostrar lista de usuarios.  
-- **POST:** Agregar nuevo usuario.  
-- **PUT:** Editar usuario existente.  
-- **DELETE:** Eliminar usuario.  
+- **GET:** Mostrar lista de usuarios.
+- **POST:** Agregar nuevo usuario.
+- **PUT:** Editar usuario existente.
+- **DELETE:** Eliminar usuario.
 
 ---
 
