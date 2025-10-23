@@ -1,7 +1,7 @@
 # 🎨 Frontend - Gestión de Usuarios
 
 Este frontend forma parte del sistema **Gestión de Usuarios**, una aplicación web desarrollada con **Angular** y **TailwindCSS**.  
-Permite registrar, listar, actualizar y eliminar usuarios a través de una interfaz moderna e interactiva, conectada al backend vía API REST.
+Permite registrar, listar, actualizar y eliminar usuarios a través de una interfaz interactiva, conectada al backend vía API REST.
 
 ---
 
@@ -10,7 +10,6 @@ Permite registrar, listar, actualizar y eliminar usuarios a través de una inter
 - **Angular** — Framework principal del frontend  
 - **TypeScript** — Lenguaje de desarrollo  
 - **Tailwind CSS** — Framework de estilos para diseño responsivo  
-- **RxJS** — Manejo de programación reactiva  
 - **Node.js & npm** — Para la gestión de dependencias y scripts
 
 ---
@@ -112,16 +111,3 @@ h1, h2, h3 {
 ✅ Editar usuarios existentes  
 ✅ Eliminar usuarios con confirmación  
 ✅ Diseño responsivo adaptable a dispositivos móviles  
-
----
-
-## 🧰 Recomendaciones
-
-- No modifiques directamente la carpeta `node_modules`.  
-- Usa `ng serve` para desarrollo y `ng build` para producción.  
-- Si Tailwind no aplica estilos correctamente, ejecuta:
-  ```bash
-  npx tailwindcss -i ./src/styles.css -o ./src/output.css --watch
-  ```
-
----
