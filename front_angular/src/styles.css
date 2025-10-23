@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Saira", sans-serif;
+    background-color: #0f0e11;
+}
+
+h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 300;
+}

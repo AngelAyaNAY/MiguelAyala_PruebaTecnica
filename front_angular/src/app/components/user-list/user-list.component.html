@@ -1,0 +1,46 @@
+<div class="w-full bg-[#232124] rounded-2xl shadow p-4 text-white">
+  <div class="w-full flex flex-col md:flex-row justify-between mb-4 gap-4">
+    <h2 class="text-xl text-center md:text-left font-semibold">Usuarios Registrados</h2>
+    <button class="bg-[#ff0839] text-white px-4 py-2 rounded-lg hover:bg-[#c90c31]" (click)="openModal()">
+      + Nuevo Usuario
+    </button>
+  </div>
+
+  <div
+    class="w-full grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] md:grid-cols-[repeat(auto-fit,minmax(30rem,1fr))] gap-4">
+    <div *ngFor="let u of users" class="bg-[#312d31] rounded-2xl flex gap-4 overflow-hidden">
+      <h1
+        class="min-w-[3.5rem] md:min-w-[5.5rem] px-3 py-1 bg-[#ff0839] text-center justify-center items-center flex font-bold text-[2rem]">
+        {{ u.id }}
+      </h1>
+
+      <div class="min-w-[14rem] w-full flex flex-col py-3 gap-1">
+        <span class="font-semibold flex flex-col md:flex-row gap-1">
+          Nombre: <span class="text-white font-normal">{{ u.nombre }}</span>
+        </span>
+        <span class="font-semibold flex flex-col md:flex-row gap-1">
+          Correo: <span class="text-white font-normal">{{ u.correo }}</span>
+        </span>
+        <span class="font-semibold flex md:flex-row gap-1">
+          Edad: <span class="text-white font-normal">{{ u.edad }}</span>
+        </span>
+      </div>
+
+      <span class="flex flex-col">
+        <button
+          class="text-left md:text-center text-[0.7rem] px-2 md:text-[1rem] bg-[#3b363b] border-b border-b-[#524b52] text-[#ffffff75] hover:text-[#ffffff] w-[8rem] h-full hover:bg-indigo-600"
+          (click)="openModal(u)">
+          Editar
+        </button>
+        <button
+          class="text-left md:text-center text-[0.7rem] px-2 md:text-[1rem] bg-[#3b363b] text-[#ffffff75] hover:text-[#ffffff] w-[8rem] h-full hover:bg-[#ff0839]"
+          (click)="deleteUser(u.id!)">
+          Eliminar
+        </button>
+      </span>
+    </div>
+  </div>
+  
+</div>
+
+<app-user-modal *ngIf="modalVisible" [user]="editingUser" (close)="closeModal($event)"></app-user-modal>
