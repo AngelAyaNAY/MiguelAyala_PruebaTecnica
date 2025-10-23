@@ -18,7 +18,7 @@ El backend se encarga de exponer una **API RESTful** que interactúa con la base
 
 ## 🗂️ Estructura del proyecto
 
-```bash
+    ```bash
 
     backend/
     │
@@ -40,7 +40,7 @@ El backend se encarga de exponer una **API RESTful** que interactúa con la base
     ├── package.json # Dependencias y scripts del proyecto
     └── README.md # Documentación del proyecto
 
-```
+    ```
 
 ---
 
@@ -70,10 +70,10 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    ```
 
 4. **Configurar las variables de entorno**
-   Crea un archivo .env en la raíz del backend con el siguiente contenido (ajustando los valores según tu entorno):
+   Crea un archivo .env en la raíz del backend con el siguiente contenido (ajustando los valores según tu entorno), usa las claves de tu entorno local generadas en la instalación de **POSTGRESQL**:
    - DB_HOST=localhost
    - DB_USER=root
-   - DB_PASSWORD=
+   - DB_PASSWORD=0000
    - DB_NAME=gestion_usuarios
    - DB_PORT=3306
    - PORT=4000
