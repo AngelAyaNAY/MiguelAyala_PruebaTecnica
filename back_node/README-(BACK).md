@@ -7,12 +7,12 @@ El backend se encarga de exponer una **API RESTful** que interactúa con la base
 
 ## 🚀 Tecnologías utilizadas
 
-- **Node.js** — Entorno de ejecución del servidor  
-- **Express.js** — Framework web para la construcción de la API  
-- **PostgreSQL** — Base de datos relacional para el almacenamiento de usuarios  
-- **Cors** — Control de acceso entre dominios  
-- **Dotenv** — Manejo de variables de entorno  
-- **Nodemon** *(opcional)* — Para desarrollo con recarga automática
+- **Node.js** — Entorno de ejecución del servidor
+- **Express.js** — Framework web para la construcción de la API
+- **PostgreSQL** — Base de datos relacional para el almacenamiento de usuarios
+- **Cors** — Control de acceso entre dominios
+- **Dotenv** — Manejo de variables de entorno
+- **Nodemon** _(opcional)_ — Para desarrollo con recarga automática
 
 ---
 
@@ -38,6 +38,18 @@ backend/
 ├── package.json # Dependencias y scripts del proyecto
 └── README.md # Documentación del proyecto
 
+/docs
+  /user
+    /project
+      _index.md
+      import_from_github.md
+    /group
+      _index.md
+    /profile
+      _index.md
+      account.md
+      applications.md
+      emails.md
 
 ---
 
@@ -46,35 +58,47 @@ backend/
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 1. **Clonar el repositorio**
+
    ```bash
    git clone https://github.com/AngelAyaNAY/MiguelAyala_PruebaTecnica.git
 
-2. **Acceder a la carpeta del backend** 
+   ```
+
+2. **Acceder a la carpeta del backend**
+
+   ```bash
    cd back_node
 
+   ```
+
 3. **Instalar dependencias**
+
+   ```bash
    npm install
+
+   ```
 
 4. **Configurar las variables de entorno**
    Crea un archivo .env en la raíz del backend con el siguiente contenido (ajustando los valores según tu entorno):
-    DB_HOST=localhost
-    DB_USER=root
-    DB_PASSWORD=
-    DB_NAME=gestion_usuarios
-    DB_PORT=3306
-    PORT=4000
+   - DB_HOST=localhost
+   - DB_USER=root
+   - DB_PASSWORD=
+   - DB_NAME=gestion_usuarios
+   - DB_PORT=3306
+   - PORT=4000
 
 ## 🔗 Endpoints principales
+Método Ruta Descripción
 
-Método	Ruta	Descripción
-GET	/api/users	Obtener todos los usuarios
-GET	/api/users/:id	Obtener un usuario por ID
-POST	/api/users	Registrar un nuevo usuario
-PUT	/api/users/:id	Actualizar un usuario existente
-DELETE	/api/users/:id	Eliminar un usuario
-
+- GET /api/users Obtener todos los usuarios
+- GET /api/users/:id Obtener un usuario por ID
+- POST /api/users Registrar un nuevo usuario
+- PUT /api/users/:id Actualizar un usuario existente
+- DELETE /api/users/:id Eliminar un usuario
 
 ## 🧠 Ejemplo de respuesta (GET /api/users)
+
+```json
 [
   {
     "id": 1,
@@ -89,11 +113,14 @@ DELETE	/api/users/:id	Eliminar un usuario
     "rol": "Usuario"
   }
 ]
-
+```
 
 ## 🧪 Conexión con el Frontend
+
 El frontend (Angular) consume los endpoints de este backend mediante solicitudes HTTP.
 Para permitir la conexión, asegúrate de tener CORS habilitado en tu configuración (app.js):
 
-const cors = require('cors');
-app.use(cors({ origin: 'http://localhost:4200' }));
+```node
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:4200" }));
+```
